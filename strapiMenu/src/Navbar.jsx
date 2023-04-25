@@ -1,19 +1,17 @@
 import React from "react";
-import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "./context";
-
-
-const handleSubmenu = () => {
-  
-};
-
+import { FaBars } from "react-icons/fa";
+import Navlinks from "./Navlinks";
 const Navbar = () => {
-  const {isSideBarOpen} = useGlobalContext();
+  const { openSidebar } = useGlobalContext();
   return (
-    <nav onMouseOver={handleSubmenu}>
+    <nav>
       <div className="nav-center">
         <h3 className="logo">strapi</h3>
-        <button className="toggle-btn"><FaBars /></button>
+        <button className="toggle-btn" onClick={openSidebar}>
+          <FaBars />
+        </button>
+       <Navlinks />
       </div>
     </nav>
   );

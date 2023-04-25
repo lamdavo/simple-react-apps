@@ -25,7 +25,7 @@ const Sidebar = () => {
                         {label}
                       </a>
                     )
-                  })};
+                  })}
                 </div>
               </article>
             )
