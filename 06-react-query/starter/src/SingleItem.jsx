@@ -1,10 +1,21 @@
+import { useMutation } from "@tanstack/react-query";
+
 const SingleItem = ({ item }) => {
+const {mutate: editTask} = useMutation({
+
+    mutationFn: ({taskId, isDone}) => {
+      return customFetch.patch(`/${taskId}`, {isDone})
+    }
+})
+
+
+
   return (
     <div className='single-item'>
       <input
         type='checkbox'
         checked={item.isDone}
-        onChange={() => console.log('edit task')}
+        onChange={() => editTask}
       />
       <p
         style={{
