@@ -1,12 +1,8 @@
-
-import './index.css'
+import "./index.css";
+import Home from "./pages/Home.jsx";
 
 function App() {
-
-
-  return (
-    <h1>React Router 6 Tutorial</h1>
-  )
+  <Home/>
 }
 
-export default App
+export default App;
